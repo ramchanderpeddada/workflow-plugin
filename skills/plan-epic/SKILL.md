@@ -72,6 +72,7 @@ Extract from the issue body:
 5. **Constraints** — deadlines, backward compat notes, tenant-specific notes
 
 **If linked issues found — fetch ALL of them:**
+
 ```bash
 gh issue view {N} --repo campx-org/{repo} --json title,body,labels
 ```
@@ -104,6 +105,7 @@ Constraints:
 ### Step 3: Classify & Identify Services
 
 **Classify the epic type:**
+
 - Feature (new capability)
 - Enhancement (extend existing behavior)
 - Bug fix (fix broken behavior)
@@ -113,18 +115,18 @@ Constraints:
 
 **Identify affected services** by scanning issue title, body, and labels for keywords:
 
-| Keywords in issue | Service |
-|-------------------|---------|
-| exam, marks, grade, moderation, GPA, memo, transcript, revaluation, grafting, grace | campx-exams-server |
-| route, gateway, proxy, auth middleware, API route registration | campx-api-gateway |
-| exam UI, student portal, exam page, result page, student-facing | campx-exams-web |
-| config, settings, exam configuration, exam setup | exam-configurations |
-| evaluator, answer sheet, evaluation, valuator | campx-evaluator-web |
-| report, PDF, template, forge, mark sheet | reports-forge-server |
-| admin, tenant management, admin portal | campx-admin-server |
-| LMS, course, assignment, attendance, learning | campx-lms-server |
-| payment, fee, transaction, challan | campx-paymentx-server |
-| tenant, multi-tenant, institution setup | campx-tenant-server |
+| Keywords in issue                                                                   | Service               |
+| ----------------------------------------------------------------------------------- | --------------------- |
+| exam, marks, grade, moderation, GPA, memo, transcript, revaluation, grafting, grace | campx-exams-server    |
+| route, gateway, proxy, auth middleware, API route registration                      | campx-api-gateway     |
+| exam UI, student portal, exam page, result page, student-facing                     | campx-exams-web       |
+| config, settings, exam configuration, exam setup                                    | exam-configurations   |
+| evaluator, answer sheet, evaluation, valuator                                       | campx-evaluator-web   |
+| report, PDF, template, forge, mark sheet                                            | reports-forge-server  |
+| admin, tenant management, admin portal                                              | campx-admin-server    |
+| LMS, course, assignment, attendance, learning                                       | campx-lms-server      |
+| payment, fee, transaction, challan                                                  | campx-paymentx-server |
+| tenant, multi-tenant, institution setup                                             | campx-tenant-server   |
 
 If no clear service match, ask: "Which service does this epic belong to?"
 
@@ -161,6 +163,7 @@ Based on issue content AND codebase findings, ask targeted questions. Scale to e
 - **Large (8+ sub-tasks):** 7-10 questions
 
 Question categories:
+
 - **[SCOPE]** What's explicitly in/out? Which portals? All tenants or specific?
 - **[PRIORITY]** Which sub-tasks are blocking? What's the delivery order?
 - **[EDGE CASE]** What happens with existing data? Backward compat requirements?
@@ -168,6 +171,7 @@ Question categories:
 - **[DEPENDENCY]** Sub-tasks blocked by other teams, services, or pending PRs?
 
 Frame questions with codebase context:
+
 ```
 Based on the issue and codebase analysis, I have [N] questions before planning:
 
@@ -189,7 +193,7 @@ Wait for answers before generating the plan.
 
 After answers are received, compile all context and write the implementation plan to the plan mode file.
 
-```
+````
 ============================================================
 IMPLEMENTATION PLAN: [Epic Title]
 Issue: [URL or campx-org/{repo}#N]
@@ -253,32 +257,36 @@ CREATE TABLE [name] (
   id INT AUTO_INCREMENT PRIMARY KEY,
   ...
 );
-```
+````
 
-------------------------------------------------------------
+---
 
 ## API Changes
+
 (omit section if no new endpoints)
 
-| Method | Path | Guard | Request DTO | Response |
-|--------|------|-------|-------------|----------|
-| POST | /api/v1/... | JwtAuthGuard | { field: type } | { field: type } |
+| Method | Path        | Guard        | Request DTO     | Response        |
+| ------ | ----------- | ------------ | --------------- | --------------- |
+| POST   | /api/v1/... | JwtAuthGuard | { field: type } | { field: type } |
 
-------------------------------------------------------------
+---
 
 ## Testing Strategy
 
 Unit Tests:
-  - [ ] [Scenario] — `{service}/src/path/file.spec.ts`
+
+- [ ] [Scenario] — `{service}/src/path/file.spec.ts`
 
 Integration Tests:
-  - [ ] [Scenario — e2e or API-level]
+
+- [ ] [Scenario — e2e or API-level]
 
 Manual Verification:
-  1. [Step-by-step check]
-  2. [Expected result]
 
-------------------------------------------------------------
+1. [Step-by-step check]
+2. [Expected result]
+
+---
 
 ## Dependency Order
 
@@ -290,33 +298,34 @@ Task 1 (entity + migration)
               └──→ Task 5 (integration test)
 ```
 
-------------------------------------------------------------
+---
 
 ## Risk Assessment
 
-| Risk | Likelihood | Impact | Mitigation |
-|------|------------|--------|------------|
+| Risk   | Likelihood   | Impact       | Mitigation        |
+| ------ | ------------ | ------------ | ----------------- |
 | [risk] | Low/Med/High | Low/Med/High | [how to mitigate] |
 
-------------------------------------------------------------
+---
 
 ## Services to Run Locally for Testing
 
-| Repo | Command | Why |
-|------|---------|-----|
+| Repo      | Command        | Why                |
+| --------- | -------------- | ------------------ |
 | {service} | yarn start:dev | [what it provides] |
 
-------------------------------------------------------------
+---
 
 ## Effort Summary
 
-| Task | Effort |
-|------|--------|
-| Task 1 | S/M/L/XL |
-| ... | ... |
+| Task      | Effort    |
+| --------- | --------- |
+| Task 1    | S/M/L/XL  |
+| ...       | ...       |
 | **Total** | **[sum]** |
 
 ============================================================
+
 ```
 
 ---
@@ -359,3 +368,4 @@ All of these mean: STOP and explain why the step cannot be skipped.
 - Called by: user directly (GitHub URL pasted, "plan this issue", "plan epic", "plan issue #N")
 - Calls: Explore subagents (haiku, 2-3 parallel in Step 4)
 - Pairs with: `explore-schema` (deeper entity FK tracing), `check-impact` (blast radius for risky changes in the plan)
+```

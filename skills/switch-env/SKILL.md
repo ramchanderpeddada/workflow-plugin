@@ -32,6 +32,7 @@ NEVER modify .env files directly. ALWAYS use merge-env.sh. This is a safety rule
 ### Step 1: Confirm Target Environment
 
 If not specified, ask:
+
 ```
 Which environment? (dev / staging / prod)
 ```
@@ -39,6 +40,7 @@ Which environment? (dev / staging / prod)
 ### Step 2: Safety Check
 
 **If switching to prod:**
+
 ```
 ⚠️ PRODUCTION ENVIRONMENT
 - All API calls will hit production data

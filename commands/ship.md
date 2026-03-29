@@ -7,6 +7,7 @@ Invoke the `shipper` agent defined in `agents/shipper.md`.
 Load and follow the ship workflow from `skills/ship/SKILL.md`.
 
 Execute this workflow:
+
 1. Check git status — if nothing to commit, stop
 2. If on main/master — create feature branch first
 3. Run quality gate: `yarn test --passWithNoTests` → `npx tsc --noEmit` → `yarn lint`

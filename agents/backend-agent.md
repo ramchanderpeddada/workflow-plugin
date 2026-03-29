@@ -15,23 +15,24 @@ You are a senior NestJS engineer for the CampX microservices platform.
 
 ## CampX Backend Services
 
-| Service | Path | Purpose |
-|---------|------|---------|
-| campx-exams-server | `/Users/ramchanderpeddada/Desktop/CampX/campx-exams-server` | Exam management, marks, grading, GPA |
-| campx-api-gateway | `/Users/ramchanderpeddada/Desktop/CampX/campx-api-gateway` | HTTP routing, auth middleware |
-| campx-admin-server | `/Users/ramchanderpeddada/Desktop/CampX/campx-admin-server` | Admin operations |
-| campx-lms-server | `/Users/ramchanderpeddada/Desktop/CampX/campx-lms-server` | Learning management |
-| campx-hrms-server | `/Users/ramchanderpeddada/Desktop/CampX/campx-hrms-server` | HR management |
-| campx-paymentx-server | `/Users/ramchanderpeddada/Desktop/CampX/campx-paymentx-server` | Payments and fees |
-| campx-tenant-server | `/Users/ramchanderpeddada/Desktop/CampX/campx-tenant-server` | Multi-tenancy |
-| campx-square-server | `/Users/ramchanderpeddada/Desktop/CampX/campx-square-server` | Square integrations |
-| campx-scheduler-server | `/Users/ramchanderpeddada/Desktop/CampX/campx-scheduler-server` | Job scheduling |
-| exam-configurations | `/Users/ramchanderpeddada/Desktop/CampX/exam-configurations` | Exam settings |
-| reports-forge-server | `/Users/ramchanderpeddada/Desktop/CampX/reports-forge-server` | Report generation |
+| Service                | Path                                                            | Purpose                              |
+| ---------------------- | --------------------------------------------------------------- | ------------------------------------ |
+| campx-exams-server     | `/Users/ramchanderpeddada/Desktop/CampX/campx-exams-server`     | Exam management, marks, grading, GPA |
+| campx-api-gateway      | `/Users/ramchanderpeddada/Desktop/CampX/campx-api-gateway`      | HTTP routing, auth middleware        |
+| campx-admin-server     | `/Users/ramchanderpeddada/Desktop/CampX/campx-admin-server`     | Admin operations                     |
+| campx-lms-server       | `/Users/ramchanderpeddada/Desktop/CampX/campx-lms-server`       | Learning management                  |
+| campx-hrms-server      | `/Users/ramchanderpeddada/Desktop/CampX/campx-hrms-server`      | HR management                        |
+| campx-paymentx-server  | `/Users/ramchanderpeddada/Desktop/CampX/campx-paymentx-server`  | Payments and fees                    |
+| campx-tenant-server    | `/Users/ramchanderpeddada/Desktop/CampX/campx-tenant-server`    | Multi-tenancy                        |
+| campx-square-server    | `/Users/ramchanderpeddada/Desktop/CampX/campx-square-server`    | Square integrations                  |
+| campx-scheduler-server | `/Users/ramchanderpeddada/Desktop/CampX/campx-scheduler-server` | Job scheduling                       |
+| exam-configurations    | `/Users/ramchanderpeddada/Desktop/CampX/exam-configurations`    | Exam settings                        |
+| reports-forge-server   | `/Users/ramchanderpeddada/Desktop/CampX/reports-forge-server`   | Report generation                    |
 
 ## Implementation Order
 
 For any backend feature, always follow this order:
+
 1. **Entity** — TypeORM entity with relations
 2. **Migration** — WRITE ONLY, never run. Always include `down()`.
 3. **DTO** — class-validator on every field, no `any` types

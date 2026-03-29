@@ -39,24 +39,26 @@ NEVER run `yarn dev` or `yarn start` — only build checks.
 ### Step 1: Ingest the Plan
 
 **Find the plan:**
+
 1. Check for plan mode file in `~/.claude/plans/` (most recent)
 2. If user pasted plan text → use that directly
 3. If neither found → STOP: "No plan found. Paste your plan or run plan-epic first."
 
 **Parse the task breakdown.** For each task in `## Task Breakdown`, extract:
 
-| Field | Source in plan | Required? |
-|-------|---------------|-----------|
-| title | `### Task N: [Title]` | Yes |
-| type | `Type:` line | No (infer from files) |
-| service | `Service:` line | Yes |
-| depends_on | `Depends on:` line | No (assume sequential) |
-| effort | `Effort:` line | No (default M) |
-| files_to_modify | `Files to modify:` list | Yes — STOP if missing |
-| existing_code | `Existing code to reuse:` list | No |
-| impl_notes | `Implementation notes:` list | No |
+| Field           | Source in plan                 | Required?              |
+| --------------- | ------------------------------ | ---------------------- |
+| title           | `### Task N: [Title]`          | Yes                    |
+| type            | `Type:` line                   | No (infer from files)  |
+| service         | `Service:` line                | Yes                    |
+| depends_on      | `Depends on:` line             | No (assume sequential) |
+| effort          | `Effort:` line                 | No (default M)         |
+| files_to_modify | `Files to modify:` list        | Yes — STOP if missing  |
+| existing_code   | `Existing code to reuse:` list | No                     |
+| impl_notes      | `Implementation notes:` list   | No                     |
 
 Also extract from the plan:
+
 - `## Schema Changes` — for migration tasks
 - `## API Changes` — for endpoint tasks
 - `## Testing Strategy` — for test requirements per task
@@ -111,6 +113,7 @@ Files:   [count] to read, [count] to modify
 Read ONLY the files listed in the plan for this task. Use the Read tool directly — do NOT launch Explore subagents, do NOT Grep, do NOT Glob. The plan already did the exploration.
 
 Read in this order:
+
 1. `Existing code to reuse` files — understand patterns to follow
 2. `Files to modify` files — understand what exists before changing it
 3. If a file is listed but doesn't exist → it's a new file to create, note it
@@ -122,6 +125,7 @@ If a path from the plan doesn't exist and isn't a new file: flag it — "Plan re
 Follow CampX implementation order within each task:
 
 **Backend task order:**
+
 1. Entity changes (if any)
 2. Migration file — write only, NEVER run. Always include `down()` method. File: `{TIMESTAMP}-{description}.ts`
 3. DTOs — `class-validator` decorator on every field, never use `any`
@@ -130,6 +134,7 @@ Follow CampX implementation order within each task:
 6. Module registration — add to providers, controllers, imports as needed
 
 **Frontend task order:**
+
 1. Types/interfaces
 2. API service functions
 3. Components (prefer @campxdev/shared and @campxdev/react-blueprint)
@@ -137,6 +142,7 @@ Follow CampX implementation order within each task:
 5. Route registration
 
 **CampX patterns to enforce:**
+
 - No `any` types — explicit TypeScript
 - No `console.log` — use NestJS `Logger`
 - No `@ts-ignore`
@@ -151,21 +157,25 @@ Follow CampX implementation order within each task:
 For every new service method or controller endpoint, write tests alongside the implementation.
 
 **Backend — test file location:**
+
 ```
 {service}/src/{module}/__tests__/{file}.spec.ts
 ```
 
 Minimum per new method/endpoint:
+
 - Happy path test
 - Error/edge case test
 - Guard/auth test for controller endpoints
 
 **Frontend — test file location:**
+
 ```
 {app}/src/{feature}/__tests__/{Component}.test.tsx
 ```
 
 Minimum:
+
 - Render test
 - User interaction test
 - API error state test
@@ -194,6 +204,7 @@ Lint:       ✓ PASS  / ⚠ WARN ([X] warnings)
 ```
 
 **On failure:**
+
 - Tests FAIL → diagnose the failing test, fix the code or test, re-run
 - TypeScript FAIL → read the error, fix type issues, re-run
 - Lint WARN → note it, continue (non-blocking)
@@ -238,6 +249,7 @@ Move to next task.
 **Only activate when user explicitly says "use agent teams" / "create a team" / "swarm this".**
 
 If requested:
+
 - Create an efficient agent team with worker teammates
 - Assign each independent task (no `depends_on`) to a separate teammate
 - Dependent tasks still run sequentially after their prerequisites

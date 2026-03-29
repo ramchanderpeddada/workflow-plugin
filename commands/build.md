@@ -7,6 +7,7 @@ Invoke the `builder` agent defined in `agents/builder.md`.
 Load and follow the implementation workflow from `skills/execute-plan/SKILL.md`.
 
 Execute implementation in this order:
+
 1. Read existing code — match patterns in the service
 2. Entity changes (TypeORM)
 3. Migration file — WRITE ONLY, never run

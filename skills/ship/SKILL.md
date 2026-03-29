@@ -29,10 +29,12 @@ git status --porcelain
 ### Step 2: Branch Check
 
 If on `main` or `master`:
+
 ```
 You're on main/master. Create a feature branch first.
 Branch name suggestion: feat/{short-description}
 ```
+
 Ask user to confirm branch name or provide their own. Create and checkout.
 
 ### Step 3: Quality Gate
@@ -67,6 +69,7 @@ Lint:       PASS / WARN (X warnings)
 ### Step 4: Generate Commit Message
 
 Analyze the diff:
+
 ```bash
 git diff --cached --stat
 git diff --stat
@@ -92,6 +95,7 @@ git push -u origin <branch>
 ```
 
 If push fails (remote ahead):
+
 ```
 Push failed. Run: git pull --rebase origin <branch>
 Then retry shipping.
@@ -100,6 +104,7 @@ Then retry shipping.
 ### Step 6: Extract Issue Number
 
 From branch name:
+
 1. `feat/123-description` → `Closes #123`
 2. `fix/456-description` → `Closes #456`
 3. No number → ask: "What issue does this close? (#N or 'none')"
@@ -121,13 +126,16 @@ gh pr create \
 
 ```markdown
 ## What
+
 [2-3 sentences: what changed and why]
 
 ## Changes
+
 - `file/path` — what changed
 - `file/path` — what changed
 
 ## Type
+
 - [ ] Feature
 - [ ] Bug fix
 - [ ] Refactor
@@ -135,14 +143,17 @@ gh pr create \
 - [ ] Chore
 
 ## Testing
+
 - [ ] Tests pass
 - [ ] TypeScript clean
 - [ ] Manually verified: [what was tested]
 
 ## Review Notes
+
 [Anything the reviewer should pay attention to — tricky logic, edge cases, decisions made]
 
 ## Screenshots
+
 [If UI changes — before/after]
 
 Closes #N

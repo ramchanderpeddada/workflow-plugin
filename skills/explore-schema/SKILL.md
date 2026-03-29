@@ -46,6 +46,7 @@ Filter to entities matching the feature area keywords.
 ### Step 3: Read Entity Files
 
 For each relevant entity, read and extract:
+
 - Table name (from `@Entity('table_name')`)
 - Columns (from `@Column` decorators) — note types, nullable, defaults
 - Relationships (from `@ManyToOne`, `@OneToMany`, `@ManyToMany`, `@JoinColumn`)
@@ -54,6 +55,7 @@ For each relevant entity, read and extract:
 ### Step 4: Trace FK Chain
 
 Follow the relationship decorators:
+
 1. Read primary entity → find all `@ManyToOne` and `@JoinColumn`
 2. Read each related entity → get their table names and key columns
 3. Build the JOIN path from what the code says (not from memory)
@@ -89,6 +91,7 @@ Key Observations:
 ### Step 6: Save Output
 
 Save to a file the user can reference later:
+
 ```
 ~/Desktop/Plans/schema/YYYY-MM-DD-{feature-area}.md
 ```

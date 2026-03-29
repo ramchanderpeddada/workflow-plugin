@@ -58,12 +58,14 @@ Announce: `Severity: [LEVEL] — [1-line reason]`
 #### 3a. Search z-migrations
 
 Search BOTH servers using absolute paths:
+
 ```bash
 find /Users/ramchanderpeddada/Desktop/CampX/campx-exams-server/src/z-migrations -name "*.ts" 2>/dev/null
 find /Users/ramchanderpeddada/Desktop/CampX/campx-square-server/src/z-migrations -name "*.ts" 2>/dev/null
 ```
 
 Known patterns:
+
 - Branch change → `student-branch-change.ts`
 - Missing registrations → `student-course-registration.ts`
 - Internal exam records → `remove-internal-registrations.ts` / `restore-internal-records.ts`
@@ -82,6 +84,7 @@ Tell user: "No existing z-migration matches. Here's the pattern to create one:" 
 #### 3d. Generate Verification Queries (AUTO — Do NOT Wait)
 
 **Process:**
+
 1. Identify affected entity from ticket keywords
 2. Search: `grep -r "class.*Entity" src/domain/` for entity names
 3. Read entity file → get table name, columns, @ManyToOne/@JoinColumn

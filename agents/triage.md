@@ -23,6 +23,7 @@ Output the complete triage card + SQL queries in a single response. Never pause 
 ## Output Format
 
 Structure triage card with:
+
 - Severity classification
 - Affected entities and tables
 - Root cause analysis

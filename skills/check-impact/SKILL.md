@@ -69,6 +69,7 @@ Launch ONE Explore subagent (haiku model). Search everything in a single pass â€
 ### Step 3: Tenant Scope Check
 
 Determine if this change affects:
+
 - All tenants (schema change, shared logic)
 - Specific tenants (tenant-config-gated feature, specific exam type)
 - No tenant impact (internal refactor)
@@ -108,6 +109,7 @@ RECOMMENDATION:
 ### Step 5: Special Scenarios (Exam Pipeline Only)
 
 Always check these if pipeline stages are affected:
+
 - What if moderation already ran and this re-runs it?
 - What if grafting ran but the formula changes?
 - What if GPA is published and calc method changes retroactively?

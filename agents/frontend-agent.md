@@ -15,26 +15,26 @@ You are a senior React engineer for the CampX microfrontend platform.
 
 ## CampX Frontend Apps
 
-| App | Path | Purpose |
-|-----|------|---------|
-| campx-exams-web | `/Users/ramchanderpeddada/Desktop/CampX/campx-exams-web` | Main exam UI (student-facing) |
-| campx-exams-web-v2 | `/Users/ramchanderpeddada/Desktop/CampX/campx-exams-web-v2` | Next-gen exam UI |
-| campx-evaluator-web | `/Users/ramchanderpeddada/Desktop/CampX/campx-evaluator-web` | Evaluator portal |
-| campx-admin-web | `/Users/ramchanderpeddada/Desktop/CampX/campx-admin-web` | Admin dashboard |
-| campx-lms-web | `/Users/ramchanderpeddada/Desktop/CampX/campx-lms-web` | LMS portal |
-| campx-hrms-web | `/Users/ramchanderpeddada/Desktop/CampX/campx-hrms-web` | HRMS portal |
-| campx-payments-web | `/Users/ramchanderpeddada/Desktop/CampX/campx-payments-web` | Payments portal |
-| campx-tenant-web | `/Users/ramchanderpeddada/Desktop/CampX/campx-tenant-web` | Tenant management |
-| campx-student-central-web | `/Users/ramchanderpeddada/Desktop/CampX/campx-student-central-web` | Student central |
-| campx-ums-web | `/Users/ramchanderpeddada/Desktop/CampX/campx-ums-web` | UMS portal |
+| App                       | Path                                                               | Purpose                       |
+| ------------------------- | ------------------------------------------------------------------ | ----------------------------- |
+| campx-exams-web           | `/Users/ramchanderpeddada/Desktop/CampX/campx-exams-web`           | Main exam UI (student-facing) |
+| campx-exams-web-v2        | `/Users/ramchanderpeddada/Desktop/CampX/campx-exams-web-v2`        | Next-gen exam UI              |
+| campx-evaluator-web       | `/Users/ramchanderpeddada/Desktop/CampX/campx-evaluator-web`       | Evaluator portal              |
+| campx-admin-web           | `/Users/ramchanderpeddada/Desktop/CampX/campx-admin-web`           | Admin dashboard               |
+| campx-lms-web             | `/Users/ramchanderpeddada/Desktop/CampX/campx-lms-web`             | LMS portal                    |
+| campx-hrms-web            | `/Users/ramchanderpeddada/Desktop/CampX/campx-hrms-web`            | HRMS portal                   |
+| campx-payments-web        | `/Users/ramchanderpeddada/Desktop/CampX/campx-payments-web`        | Payments portal               |
+| campx-tenant-web          | `/Users/ramchanderpeddada/Desktop/CampX/campx-tenant-web`          | Tenant management             |
+| campx-student-central-web | `/Users/ramchanderpeddada/Desktop/CampX/campx-student-central-web` | Student central               |
+| campx-ums-web             | `/Users/ramchanderpeddada/Desktop/CampX/campx-ums-web`             | UMS portal                    |
 
 ## Shared Libraries (Check Before Writing New Code)
 
-| Library | Purpose |
-|---------|---------|
-| `@campxdev/shared` (`campx-shared-web`) | Components, layouts, hooks, contexts, permissions, theme |
-| `@campxdev/react-blueprint` (`react-blueprint`) | UI primitives — built on MUI |
-| `@campxdev/campx-web-utils` (`campx-web-utils`) | axios config, selectors, useConfirm, context providers |
+| Library                                         | Purpose                                                  |
+| ----------------------------------------------- | -------------------------------------------------------- |
+| `@campxdev/shared` (`campx-shared-web`)         | Components, layouts, hooks, contexts, permissions, theme |
+| `@campxdev/react-blueprint` (`react-blueprint`) | UI primitives — built on MUI                             |
+| `@campxdev/campx-web-utils` (`campx-web-utils`) | axios config, selectors, useConfirm, context providers   |
 
 **Discovery order:** Always check `@campxdev/shared` → `@campxdev/react-blueprint` → `@campxdev/campx-web-utils` before writing a new component or hook.
 
