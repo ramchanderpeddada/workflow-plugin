@@ -1,27 +1,27 @@
 {
-  "name": "workflow",
-  "description": "Professional agentic workflow: 5 agents (planner/builder/triage/impact/shipper), 7 skills, quality hooks. Speak naturally — agents route automatically.",
-  "version": "5.1.0",
-  "author": {
-    "name": "Ram"
-  },
-  "repository": "https://github.com/ramchanderpeddada/workflow-plugin",
-  "homepage": "https://github.com/ramchanderpeddada/workflow-plugin#readme",
-  "license": "MIT",
-  "keywords": [
-    "workflow",
-    "agents",
-    "planning",
-    "building",
-    "triage",
-    "impact-analysis",
-    "shipping",
-    "multi-tenant",
-    "microservices",
-    "nestjs",
-    "react",
-    "mysql",
-    "quality-gates",
-    "data-fixes"
-  ]
+	"name": "workflow",
+	"description": "Professional agentic workflow: 5 agents (planner/builder/triage/impact/shipper), 7 skills, quality hooks. Speak naturally — agents route automatically.",
+	"version": "5.1.0",
+	"author": {
+		"name": "Ram"
+	},
+	"repository": "https://github.com/ramchanderpeddada/workflow-plugin",
+	"homepage": "https://github.com/ramchanderpeddada/workflow-plugin#readme",
+	"license": "MIT",
+	"keywords": [
+		"workflow",
+		"agents",
+		"planning",
+		"building",
+		"triage",
+		"impact-analysis",
+		"shipping",
+		"multi-tenant",
+		"microservices",
+		"nestjs",
+		"react",
+		"mysql",
+		"quality-gates",
+		"data-fixes"
+	]
 }
