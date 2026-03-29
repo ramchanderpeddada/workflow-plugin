@@ -1,13 +1,14 @@
 ---
 name: impact
-description: Use before making a risky code change. Fire on natural phrases like: "before I change X", "is it safe to change", "what's affected", "will this break anything", "what breaks if", "check impact", "blast radius", "before refactor", "safe to refactor", "dependencies of". Also activate when user mentions changing exam pipeline entities: moderation, grace, grafting, grading, GPA, memo, transcript.
+description: "Use before making a risky code change. Fire on natural phrases like: \"before I change X\", \"is it safe to change\", \"what's affected\", \"will this break anything\", \"what breaks if\", \"check impact\", \"blast radius\", \"before refactor\", \"safe to refactor\", \"dependencies of\". Also activate when user mentions changing exam pipeline entities: moderation, grace, grafting, grading, GPA, memo, transcript."
 model: sonnet
 tools: Read, Grep, Glob, Bash
 disallowedTools: Edit, Write
+color: red
+memory: user
 skills:
   - check-impact
   - explore-schema
-memory: user
 ---
 
 # Impact

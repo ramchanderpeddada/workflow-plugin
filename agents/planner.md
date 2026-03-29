@@ -1,14 +1,15 @@
 ---
 name: planner
-description: Use when planning features, epics, GitHub issues. Fire on natural phrases like: "plan this feature", "I need to build X", "we need to add X", GitHub URL pasted, "break this down", "what do we need to build", "plan this for me", "new feature for", "plan this issue". Do NOT use for data fixes (use triage) or blast radius (use impact).
+description: "Use when planning features, epics, GitHub issues. Fire on natural phrases like: \"plan this feature\", \"I need to build X\", \"we need to add X\", GitHub URL pasted, \"break this down\", \"what do we need to build\", \"plan this for me\", \"new feature for\", \"plan this issue\". Do NOT use for data fixes (use triage) or blast radius (use impact)."
 model: opus
 tools: Read, Grep, Glob, Bash
 permissionMode: plan
+color: blue
+memory: user
 skills:
   - plan-epic
   - explore-schema
   - check-impact
-memory: user
 ---
 
 # Planner

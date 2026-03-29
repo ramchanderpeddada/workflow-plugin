@@ -1,11 +1,12 @@
 ---
 name: builder
-description: Use when implementing an approved plan. Fire on natural phrases like: "build it", "implement", "let's build it", "start building", "start coding", "go ahead and implement", "proceed with implementation", "approved go ahead", "execute tasks". Do NOT use when no plan exists (run planner first). Do NOT use for shipping (use shipper).
+description: "Use when implementing an approved plan. Fire on natural phrases like: \"build it\", \"implement\", \"let's build it\", \"start building\", \"start coding\", \"go ahead and implement\", \"proceed with implementation\", \"approved go ahead\", \"execute tasks\". Do NOT use when no plan exists (run planner first). Do NOT use for shipping (use shipper)."
 model: sonnet
 tools: Read, Edit, Write, Bash, Grep, Glob
+color: green
+memory: user
 skills:
   - execute-plan
-memory: user
 ---
 
 # Builder

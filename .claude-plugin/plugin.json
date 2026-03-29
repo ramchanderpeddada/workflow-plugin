@@ -5,5 +5,23 @@
   "author": {
     "name": "Ram"
   },
-  "repository": "https://github.com/ramchanderpeddada/workflow-plugin"
+  "repository": "https://github.com/ramchanderpeddada/workflow-plugin",
+  "homepage": "https://github.com/ramchanderpeddada/workflow-plugin#readme",
+  "license": "MIT",
+  "keywords": [
+    "workflow",
+    "agents",
+    "planning",
+    "building",
+    "triage",
+    "impact-analysis",
+    "shipping",
+    "multi-tenant",
+    "microservices",
+    "nestjs",
+    "react",
+    "mysql",
+    "quality-gates",
+    "data-fixes"
+  ]
 }

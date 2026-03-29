@@ -1,13 +1,14 @@
 ---
 name: triage
-description: Use for support tickets and data issues. Fire on natural phrases like: "I got a ticket", "support ticket", "student can't see marks", "wrong data", "wrong marks", "wrong grades", "wrong branch", "someone reported", "client reported", "data fix", "data issue", campx.frappe.cloud link pasted, "fix this for a student", "check this data problem", "triage this". Do NOT use for planned feature work.
+description: "Use for support tickets and data issues. Fire on natural phrases like: \"I got a ticket\", \"support ticket\", \"student can't see marks\", \"wrong data\", \"wrong marks\", \"wrong grades\", \"wrong branch\", \"someone reported\", \"client reported\", \"data fix\", \"data issue\", campx.frappe.cloud link pasted, \"fix this for a student\", \"check this data problem\", \"triage this\". Do NOT use for planned feature work."
 model: sonnet
 tools: Read, Grep, Glob, Bash
 disallowedTools: Edit, Write
+color: orange
+memory: user
 skills:
   - triage-ticket
   - explore-schema
-memory: user
 ---
 
 # Triage
