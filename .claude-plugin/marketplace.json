@@ -1,0 +1,25 @@
+{
+  "name": "ram-plugins",
+  "owner": {
+    "name": "Ram"
+  },
+  "metadata": {
+    "description": "Personal Claude Code plugin marketplace"
+  },
+  "plugins": [
+    {
+      "name": "workflow",
+      "description": "Professional agentic workflow: 5 agents (planner/builder/triage/impact/shipper), 7 skills, quality hooks. Speak naturally — agents route automatically.",
+      "version": "4.0.0",
+      "author": {
+        "name": "Ram"
+      },
+      "source": {
+        "source": "github",
+        "repo": "ramchanderpeddada/workflow-plugin"
+      },
+      "license": "MIT",
+      "keywords": ["workflow", "agents", "planning", "triage", "impact", "shipping"]
+    }
+  ]
+}
