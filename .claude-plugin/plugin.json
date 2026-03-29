@@ -1,0 +1,9 @@
+{
+  "name": "workflow",
+  "description": "Professional agentic workflow: 5 agents (planner/builder/triage/impact/shipper), 7 skills, quality hooks. Speak naturally — agents route automatically.",
+  "version": "4.0.0",
+  "author": {
+    "name": "Ram"
+  },
+  "repository": "https://github.com/ramchanderpeddada/workflow-plugin"
+}
