@@ -5,6 +5,9 @@ model: sonnet
 tools: Read, Grep, Glob, Bash
 color: blue
 memory: user
+skills:
+  - workflow:plan-epic
+  - workflow:explore-schema
 ---
 
 # Planner

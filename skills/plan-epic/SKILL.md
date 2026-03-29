@@ -1,7 +1,6 @@
 ---
 name: plan-epic
 description: "Use proactively when user wants to plan or design a feature, epic, or implementation. Trigger on: plan this feature, I need to build X, we need to add X, plan this issue, GitHub issue URL pasted, break this down, what do we need to build, plan this for me, new feature for, plan this issue, how should we implement, design this, architect this. Do NOT use for data fixes (use triage-ticket) or blast radius checks (use check-impact)."
-context: fork
 ---
 
 # Plan Epic

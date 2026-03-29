@@ -6,6 +6,9 @@ tools: Read, Grep, Glob, Bash
 disallowedTools: Edit, Write
 color: orange
 memory: user
+skills:
+  - workflow:triage-ticket
+  - workflow:explore-schema
 ---
 
 # Triage

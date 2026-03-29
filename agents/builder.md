@@ -5,6 +5,8 @@ model: sonnet
 tools: Read, Edit, Write, Bash, Grep, Glob
 color: green
 memory: user
+skills:
+  - workflow:execute-plan
 ---
 
 # Builder

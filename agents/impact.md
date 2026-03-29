@@ -6,6 +6,9 @@ tools: Read, Grep, Glob, Bash
 disallowedTools: Edit, Write
 color: red
 memory: user
+skills:
+  - workflow:check-impact
+  - workflow:explore-schema
 ---
 
 # Impact

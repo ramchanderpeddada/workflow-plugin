@@ -5,6 +5,8 @@ model: haiku
 tools: Read, Bash
 color: purple
 memory: user
+skills:
+  - workflow:ship
 ---
 
 # Shipper
