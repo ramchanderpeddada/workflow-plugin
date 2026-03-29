@@ -1,6 +1,7 @@
 ---
 name: ship
-description: "Use when user is done coding and wants to commit, push, and create a PR. Trigger on: done push it, ship it, ship this, commit and push, push this, create a PR, ready to ship, let's merge this, done coding, finished let's ship, create a pull request, merge this."
+description: "Quality gate, commit, push, and PR workflow."
+disable-model-invocation: true
 ---
 
 # Ship
