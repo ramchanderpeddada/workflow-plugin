@@ -2,12 +2,20 @@
 argument-hint: [github-url or feature description]
 ---
 
-# Plan
+Invoke the `planner` agent defined in `agents/planner.md`.
 
-Plan the feature or GitHub issue: $ARGUMENTS
+Load and follow the planning workflow from `skills/plan-epic/SKILL.md`.
 
-Use the planner agent to:
-1. Fetch the issue if a GitHub URL is provided
-2. Ask targeted clarifying questions
-3. Explore the codebase for existing patterns
-4. Produce a structured implementation plan
+Execute this workflow:
+1. If a GitHub URL is provided, fetch the issue metadata
+2. Ask 3-5 targeted clarifying questions about scope, tenants, services affected
+3. Launch ONE Explore subagent scoped to the specific service directory
+4. Generate a structured implementation plan with absolute file paths, effort estimates, and dependency order
+
+NEVER write code or make edits — plans only.
+
+---
+
+The user's input for this session is:
+
+$ARGUMENTS
