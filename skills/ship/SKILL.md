@@ -1,6 +1,6 @@
 ---
 name: ship
-description: Use when user is done coding and wants to commit, push, and create a PR. Fire on natural phrases like: "done, push it", "ready to go", "let's merge this", "I'm done with this", "push my code", "done coding", "finished let's ship", or trigger phrases: "ship this", "ship it", "commit and push", "push this", "create a PR", "push my changes", "commit this", "ready to ship", "let's ship", "merge this", "create a pull request". Do NOT use when code is mid-implementation or tests are failing.
+description: "Called by the shipper agent to run quality gate and create a PR."
 ---
 
 # Ship

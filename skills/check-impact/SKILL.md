@@ -1,6 +1,6 @@
 ---
 name: check-impact
-description: Use when user wants to understand the impact or risk of a code change. Fire on natural phrases like: "before I change X", "is it safe to change", "what's affected by", "I want to modify X what breaks", "will this break anything", "checking before refactor", or trigger phrases: "what breaks if", "check impact", "blast radius", "what does this affect", "impact of changing", "dependencies of", "safe to refactor". Also auto-activate when user mentions changing exam pipeline entities: moderation, grace, grafting, grading, GPA, memo, transcript. Do NOT use for general exploration — use explore-schema.
+description: "Called by the impact agent to trace blast radius of a code change."
 ---
 
 # Check Impact

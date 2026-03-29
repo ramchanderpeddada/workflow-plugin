@@ -1,6 +1,6 @@
 ---
 name: triage-ticket
-description: Use when user has a support ticket or data issue to fix. Fire on natural phrases like: "I got a ticket", "support ticket came in", "student can't see marks", "wrong data showing", "someone reported", "client reported", "fix this for a student", "check this data problem", or keywords: "subject code change", "delete subject", "branch change", "registration fix", "grade deletion", "wrong marks", "wrong grades", "wrong branch", "data fix", "triage this", "got a ticket", "Frappe ticket", "barcode mapping", "memo serial", "internal exam delete", "restore records", "topic transfer", "migration check", "data issue". Also fire when campx.frappe.cloud link pasted. Do NOT use for planned feature work or code bugs without data issues.
+description: "Called by the triage agent to classify and route support tickets."
 ---
 
 # Triage Ticket

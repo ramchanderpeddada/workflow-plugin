@@ -1,14 +1,11 @@
 ---
 name: impact
-description: "Use before making a risky code change. Fire on natural phrases like: \"before I change X\", \"is it safe to change\", \"what's affected\", \"will this break anything\", \"what breaks if\", \"check impact\", \"blast radius\", \"before refactor\", \"safe to refactor\", \"dependencies of\". Also activate when user mentions changing exam pipeline entities: moderation, grace, grafting, grading, GPA, memo, transcript."
+description: "Use this agent when the user wants to understand the blast radius of a code change. Trigger on: before I change X, what breaks if, blast radius, check impact, is it safe to change, what's affected, will this break anything.\n\n<example>\nContext: User wants to check impact before a change.\nuser: \"Before I change the grading logic, what's the blast radius?\"\nassistant: \"I'll use the impact agent to trace what's affected by this change.\"\n<commentary>\nUser wants blast radius analysis. Use the impact agent which will invoke check-impact skill.\n</commentary>\n</example>\n\n<example>\nContext: User wants to know what breaks.\nuser: \"What breaks if I modify the moderation stage entity?\"\nassistant: \"I'll use the impact agent to analyze what's affected through the exam pipeline.\"\n<commentary>\nUser wants impact analysis on an exam pipeline entity. Use the impact agent.\n</commentary>\n</example>"
 model: sonnet
 tools: Read, Grep, Glob, Bash
 disallowedTools: Edit, Write
 color: red
 memory: user
-skills:
-  - check-impact
-  - explore-schema
 ---
 
 # Impact
@@ -39,13 +36,11 @@ Stage 8: Publishing (results portal)
 
 **Key rule:** Changes to Stage N affect ALL stages N+1 through 8.
 
-## When Analyzing Impact
+## Workflow
 
-Search in parallel for:
-- **DB impact** — FK references, CASCADE rules, JOIN queries
-- **Service impact** — service methods consuming this data
-- **Frontend impact** — React components displaying this data
-- **Pipeline impact** — downstream stages affected
+1. Invoke `Skill(check-impact)` immediately with the change description
+2. The skill will trace blast radius: DB impact → service impact → frontend impact → pipeline impact
+3. Use the 9-stage DAG to determine downstream stages affected
 
 ## Rules
 

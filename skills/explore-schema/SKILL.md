@@ -1,6 +1,6 @@
 ---
 name: explore-schema
-description: Use when user wants to understand database structure, entities, or relationships. Fire on natural phrases like: "how does X relate to Y", "what tables are involved in X", "how is X structured in the DB", "show me the schema for X", "what entities exist for X", or trigger phrases: "explore schema", "show entities", "what tables for", "schema of", "entity relationships", "FK chain", "database structure", "DB structure". Do NOT use for blast radius analysis — use check-impact.
+description: "Called by the planner or triage agent to explore database schema."
 ---
 
 # Explore Schema

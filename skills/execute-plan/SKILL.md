@@ -1,6 +1,6 @@
 ---
 name: execute-plan
-description: Use when user wants to start implementing an approved plan. Fire on natural phrases like: "execute the plan", "implement the plan", "run the plan", "start implementing", "start building", "let's build it", "go ahead and implement", "start coding", "build this now", "implement this", "proceed with implementation", "approved start", "yes go ahead and build", "execute tasks", "build from plan", "approved, go ahead". Do NOT use when no plan exists — run plan-epic first. Do NOT use for shipping — use ship after.
+description: "Called by the builder agent to execute an approved plan."
 ---
 
 # Execute Plan

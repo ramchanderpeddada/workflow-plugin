@@ -1,6 +1,6 @@
 ---
 name: plan-epic
-description: Use when user wants to plan a feature, epic, or task breakdown. Fire on natural phrases like: GitHub issue URL, "plan this feature", "I need to build X", "we need to add X to the system", "plan this issue", "plan epic", "plan issue #N", "break this down", "what do we need to build", "here's the epic", "analyze this epic", "plan this task", "plan this for me", "new feature for". Do NOT use for support tickets or data fixes — use triage-ticket. Do NOT use for blast radius — use check-impact.
+description: "Called by the planner agent to plan features and epics."
 ---
 
 # Plan Epic
