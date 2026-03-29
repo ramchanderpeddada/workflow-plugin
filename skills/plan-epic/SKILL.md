@@ -129,50 +129,24 @@ If no clear service match, ask: "Which service does this epic belong to?"
 
 ---
 
-### Step 4: Codebase Exploration (Parallel Subagents)
+### Step 4: Codebase Exploration (ONE Explore subagent)
 
-Launch 2-3 Explore subagents (haiku model) **in parallel**, scoped to the identified services. Never search the entire `~/Desktop/CampX/` root.
+Launch ONE Explore subagent (haiku model), scoped to the primary service only. Never search the entire `~/Desktop/CampX/` root. Never spawn multiple subagents.
 
-**Agent 1 — Backend Entities & Services**
-Scope: `/Users/ramchanderpeddada/Desktop/CampX/{primary-backend-service}/src/`
+**Single Explore Agent**
+Scope: `/Users/ramchanderpeddada/Desktop/CampX/{primary-service}/src/`
 
 ```
 Search for:
-1. Entity files: grep -r "class.*Entity" src/domain/ --include="*.ts" -l
+1. Entity files matching keyword: grep -r "class.*Entity" src/domain/ --include="*.ts" -l
 2. Related service files: grep -r "{keyword}" src/ --include="*.service.ts" -l
 3. Controller endpoints: grep -r "{keyword}" src/ --include="*.controller.ts" -l
 4. Existing DTOs: grep -r "{keyword}" src/ --include="*.dto.ts" -l
-5. Test files: find src/ -name "*.spec.ts" | xargs grep -l "{keyword}" 2>/dev/null
-6. Recent migrations (latest 5): ls -t src/migrations/ | head -5
+5. Recent migrations (latest 5): ls -t src/migrations/ | head -5
+6. Frontend pages (if applicable): grep -r "{keyword}" {frontend}/src/pages/ --include="*.tsx" -l 2>/dev/null
+7. Gateway routes: grep -r "{keyword}" campx-api-gateway/src/ --include="*.ts" -l 2>/dev/null
 
-Report: entity class names, table names, key service methods, existing endpoint paths, test file locations.
-```
-
-**Agent 2 — Frontend Components & Routes**
-Scope: `/Users/ramchanderpeddada/Desktop/CampX/{primary-frontend-app}/src/`
-
-```
-Search for:
-1. Page components: grep -r "{keyword}" src/pages/ --include="*.tsx" -l 2>/dev/null
-2. API service calls: grep -r "{keyword}" src/services/ --include="*.ts" -l 2>/dev/null
-3. Route definitions: grep -r "{keyword}" src/ -l --include="*route*" 2>/dev/null
-4. Shared component imports: grep -r "@campxdev" src/ --include="*.tsx" | grep import | head -20
-
-Report: page file paths, API function names, route structure, shared components in use.
-```
-
-**Agent 3 — Cross-Service Dependencies** (only when multiple services affected)
-Scope: `campx-api-gateway/src/` and shared libs
-
-```
-Search campx-api-gateway for:
-1. Route registrations for affected service: grep -r "{service-prefix}" src/ --include="*.ts" -l
-2. Guards or middleware specific to these routes
-
-Search campx-server-shared for:
-3. Shared DTOs or utilities: grep -r "{keyword}" src/ --include="*.ts" -l
-
-Report: gateway route paths, shared utilities to reuse, cross-service HTTP call patterns.
+Report: entity names, service methods, endpoint paths, frontend pages found.
 ```
 
 ---

@@ -56,14 +56,14 @@ Ask: "What entity/file/module is changing?" if not clear from context.
 
 Map the change to a pipeline stage (or "non-pipeline" if it doesn't touch the DAG).
 
-### Step 2: Trace Downstream (Parallel Search)
+### Step 2: Trace Downstream (ONE Explore subagent)
 
-Spawn 4 Explore subagents (haiku model) in parallel:
+Launch ONE Explore subagent (haiku model). Search everything in a single pass — never spawn multiple subagents:
 
-1. **DB Impact** — search for FK references, CASCADE rules, JOIN queries involving the changed entity
-2. **Service Impact** — search for service methods that consume data from the changed module
-3. **Frontend Impact** — search React components that display data affected by the change
-4. **Pipeline Impact** — trace the DAG: list all stages from N+1 to 8 that would be affected
+1. **DB Impact** — FK references, CASCADE rules on the changed entity
+2. **Service Impact** — service methods consuming data from this module
+3. **Frontend Impact** — React components displaying this data
+4. **Pipeline Impact** — trace DAG: all stages from N+1 to 8 affected
 
 ### Step 3: Tenant Scope Check
 
