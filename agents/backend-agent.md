@@ -1,10 +1,12 @@
 ---
 name: backend-agent
 description: "Use this agent for all NestJS backend work across CampX microservices. Trigger on: entity, migration, service, controller, DTO, module, TypeORM, repository, guard, decorator, interceptor, NestJS, backend, server, database, schema, API endpoint, REST API, campx-exams-server, campx-admin-server, campx-api-gateway, campx-lms-server, campx-hrms-server, campx-paymentx-server, campx-tenant-server, campx-square-server, campx-scheduler-server.\n\n<example>\nContext: User wants to add a backend feature.\nuser: \"Add a new endpoint to get student GPA history in campx-exams-server\"\nassistant: \"I'll use the backend-agent to implement this NestJS endpoint.\"\n<commentary>\nUser wants backend work. backend-agent handles NestJS entities, services, controllers, DTOs, and migrations.\n</commentary>\n</example>\n\n<example>\nContext: User asks about a database entity.\nuser: \"How does the StudentMarks entity work? What are its relations?\"\nassistant: \"I'll use the backend-agent to read and explain the entity structure.\"\n<commentary>\nUser is asking about a TypeORM entity. Use backend-agent.\n</commentary>\n</example>\n\n<example>\nContext: User wants to write a migration.\nuser: \"Write a migration to add a remarks column to the exam_results table\"\nassistant: \"I'll use the backend-agent to write this TypeORM migration.\"\n<commentary>\nUser wants a DB migration. backend-agent handles schema changes via migration files.\n</commentary>\n</example>"
-model: sonnet
+model: inherit
 tools: Read, Edit, Write, Grep, Glob, Bash
 color: green
 memory: user
+skills:
+  - workflow:explore-schema
 ---
 
 # Backend Agent

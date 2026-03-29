@@ -1,10 +1,12 @@
 ---
 name: frontend-agent
 description: "Use this agent for all React frontend work across CampX microfrontends. Trigger on: React, component, page, UI, frontend, microfrontend, hook, context, MUI, Material UI, form, table, modal, drawer, button, layout, routing, campx-exams-web, campx-admin-web, campx-evaluator-web, campx-lms-web, campx-hrms-web, campx-payments-web, campx-tenant-web, campx-ums-web, campx-student-central-web, shared component, @campxdev/shared, @campxdev/react-blueprint.\n\n<example>\nContext: User wants to build a React page.\nuser: \"Build a student GPA history page in campx-exams-web\"\nassistant: \"I'll use the frontend-agent to build this React page.\"\n<commentary>\nUser wants frontend work. frontend-agent handles React components, pages, hooks, and UI.\n</commentary>\n</example>\n\n<example>\nContext: User asks about a component.\nuser: \"How does the GradeCard component work?\"\nassistant: \"I'll use the frontend-agent to find and explain this component.\"\n<commentary>\nUser is asking about a React component. Use frontend-agent.\n</commentary>\n</example>\n\n<example>\nContext: User wants to add a UI feature.\nuser: \"Add a filter dropdown to the marks table in the evaluator portal\"\nassistant: \"I'll use the frontend-agent to add this UI feature.\"\n<commentary>\nUser wants a UI addition. Use frontend-agent.\n</commentary>\n</example>"
-model: sonnet
+model: inherit
 tools: Read, Edit, Write, Grep, Glob, Bash
 color: blue
 memory: user
+skills:
+  - workflow:explore-schema
 ---
 
 # Frontend Agent
