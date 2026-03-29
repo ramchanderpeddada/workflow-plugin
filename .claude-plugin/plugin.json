@@ -1,7 +1,7 @@
 {
 	"name": "workflow",
-	"description": "Professional agentic workflow: 5 agents (planner/builder/triage/impact/shipper), 7 skills, quality hooks. Speak naturally — agents route automatically.",
-	"version": "5.1.0",
+	"description": "Professional agentic workflow: 7 agents (planner/builder/triage/impact/shipper/reviewer/debugger), 7 skills, quality hooks. Speak naturally — agents route automatically.",
+	"version": "5.2.0",
 	"author": {
 		"name": "Ram"
 	},
@@ -16,6 +16,8 @@
 		"triage",
 		"impact-analysis",
 		"shipping",
+		"code-review",
+		"debugging",
 		"multi-tenant",
 		"microservices",
 		"nestjs",
