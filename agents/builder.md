@@ -31,4 +31,4 @@ For frontend features: read existing pages first, check shared libs (`@campxdev/
 - No `any` types, no `console.log` (use `Logger`), no `@ts-ignore`
 - Never run migrations or `yarn start` or `yarn dev`
 - Scope searches to the specific service directory
-- Check `campx-server-shared` for shared utilities before writing new ones
+- Check `core` for shared utilities before writing new ones

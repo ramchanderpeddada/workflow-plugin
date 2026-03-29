@@ -48,4 +48,4 @@ For any backend feature, always follow this order:
 - Never run migrations — write file only, tell user to run manually
 - Never run `yarn start` or `yarn dev`
 - Always scope file searches to the specific service directory, not all of `/Users/ramchanderpeddada/Desktop/CampX/`
-- Check `campx-server-shared` for shared guards, interceptors, and utilities before writing new ones
+- Check `core` for shared guards, interceptors, and utilities before writing new ones
