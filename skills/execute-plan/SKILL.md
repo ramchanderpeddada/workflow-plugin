@@ -1,6 +1,7 @@
 ---
 name: execute-plan
-description: "Called by the builder agent to execute an approved plan."
+description: "Use when user wants to implement or build from an approved plan. Trigger on: build it, implement, let's build it, start building, start coding, go ahead and implement, proceed with implementation, approved go ahead, execute tasks, execute the plan, run the plan, implement the plan, start implementing. Do NOT use when no plan exists — run plan-epic first. Do NOT use for shipping — use ship."
+context: fork
 ---
 
 # Execute Plan

@@ -1,6 +1,7 @@
 ---
 name: explore-schema
-description: "Called by the planner or triage agent to explore database schema."
+description: "Use when user wants to understand database schema, entity relationships, or table structure. Trigger on: what tables are involved, explore schema, what's the schema for, entity relationships, FK chain, what entities are related, schema for this feature, what does this entity look like, map the database."
+context: fork
 ---
 
 # Explore Schema

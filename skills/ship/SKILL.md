@@ -1,6 +1,7 @@
 ---
 name: ship
-description: "Called by the shipper agent to run quality gate and create a PR."
+description: "Use when user is done coding and wants to commit, push, and create a PR. Trigger on: done push it, ship it, ship this, commit and push, push this, create a PR, ready to ship, let's merge this, done coding, finished let's ship, create a pull request, merge this."
+context: fork
 ---
 
 # Ship

@@ -1,6 +1,7 @@
 ---
 name: triage-ticket
-description: "Called by the triage agent to classify and route support tickets."
+description: "Use when user has a support ticket or data issue. Trigger on: I got a ticket, support ticket, student can't see marks, wrong data, wrong marks, wrong grades, wrong branch, someone reported, client reported, data fix, data issue, campx.frappe.cloud link pasted, fix this for a student, check this data problem, triage this, ticket says, user reported. Do NOT use for planned feature work."
+context: fork
 ---
 
 # Triage Ticket

@@ -1,6 +1,7 @@
 ---
 name: check-impact
-description: "Called by the impact agent to trace blast radius of a code change."
+description: "Use when user wants to understand the blast radius of a code change. Trigger on: before I change X, what breaks if, blast radius, check impact, is it safe to change, what's affected, will this break anything, what breaks if I modify, safe to refactor, before refactor, before I delete. Also trigger when user mentions changing: moderation, grace, grafting, grading, GPA, memo, transcript."
+context: fork
 ---
 
 # Check Impact
