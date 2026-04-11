@@ -1,7 +1,6 @@
 ---
 name: switch-env
-description: Use when user says "switch env", "switch to staging", "switch to prod", "switch to dev", "change environment", "use staging", "use production". Switches environment configuration for all backend services using merge-env.sh. Do NOT use for frontend env changes or Docker config changes.
-disable-model-invocation: true
+description: "Switches CampX backend environment config using merge-env.sh. Use PROACTIVELY when user says: 'switch env', 'switch to staging', 'switch to prod', 'switch to dev', 'change environment', 'use staging', 'use production', 'point to prod', 'point to staging'. Do NOT use for frontend env changes or Docker config."
 ---
 
 # Switch Env
@@ -84,6 +83,6 @@ cat .env | grep -E "DB_HOST|API_URL|NODE_ENV" | head -5
 
 ## Integration
 
-- Called by: user directly (manual invocation only — disable-model-invocation: true)
+- Called by: user directly or auto-triggered on env switch keywords
 - Calls: nothing
 - Pairs with: nothing

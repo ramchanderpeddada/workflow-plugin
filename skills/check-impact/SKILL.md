@@ -1,7 +1,6 @@
 ---
 name: check-impact
-description: "Blast radius analysis workflow."
-disable-model-invocation: true
+description: "Analyzes blast radius and downstream impact of code changes across the CampX exam pipeline. Use PROACTIVELY when user says: 'before I change', 'what breaks if', 'blast radius', 'check impact', 'is it safe to change', 'what's affected', 'will this break anything', 'safe to refactor', 'before I delete', 'before I modify'. Also trigger when user mentions changing: moderation, grace, grafting, grading, GPA, memo, transcript, exam pipeline stages."
 ---
 
 # Check Impact

@@ -1,7 +1,6 @@
 ---
 name: ship
-description: "Quality gate, commit, push, and PR workflow."
-disable-model-invocation: true
+description: "Runs quality gate then commits, pushes, and creates a PR for CampX repos. Use PROACTIVELY when user says: 'ship it', 'ship this', 'done push it', 'commit and push', 'create a PR', 'ready to ship', 'push this', 'let's merge this', 'done coding', 'create pull request', 'merge this'. Runs tsc + lint + tests before committing. Never ships without passing quality gate."
 ---
 
 # Ship

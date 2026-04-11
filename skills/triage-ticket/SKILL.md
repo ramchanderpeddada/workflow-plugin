@@ -1,7 +1,6 @@
 ---
 name: triage-ticket
-description: "Triage workflow for support tickets and data issues."
-disable-model-invocation: true
+description: "Investigates and resolves CampX support tickets and data issues. Use PROACTIVELY when user says: 'I got a ticket', 'support ticket', 'student can't see', 'wrong data', 'wrong marks', 'wrong grades', 'wrong branch', 'someone reported', 'client reported', 'data fix', 'data issue', 'triage this', pastes a campx.frappe.cloud link, or reports any student/tenant data problem. Fetches ticket from Frappe or GitHub, classifies severity, finds matching z-migration, reads affected entities, generates verification SQL queries — all in one pass."
 ---
 
 # Triage Ticket
